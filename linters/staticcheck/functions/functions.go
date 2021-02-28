@@ -4,10 +4,10 @@ import (
 	"go/types"
 	"sync"
 
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/simpler/ssa"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/staticcheck/callgraph"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/staticcheck/callgraph/static"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/staticcheck/vrp"
+	"github.com/alphayan/goreporter/linters/simpler/ssa"
+	"github.com/alphayan/goreporter/linters/staticcheck/callgraph"
+	"github.com/alphayan/goreporter/linters/staticcheck/callgraph/static"
+	"github.com/alphayan/goreporter/linters/staticcheck/vrp"
 )
 
 var stdlibDescs = map[string]Description{

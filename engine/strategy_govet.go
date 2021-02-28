@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/govet"
-	"github.com/360EntSecGroup-Skylar/goreporter/utils"
+	"github.com/alphayan/goreporter/linters/govet"
+	"github.com/alphayan/goreporter/utils"
 )
 
 type StrategyGoVet struct {

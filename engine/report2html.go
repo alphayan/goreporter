@@ -30,7 +30,7 @@ import (
 	"github.com/golang/glog"
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/360EntSecGroup-Skylar/goreporter/utils"
+	"github.com/alphayan/goreporter/utils"
 )
 
 var (

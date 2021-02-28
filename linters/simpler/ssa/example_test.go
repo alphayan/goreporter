@@ -15,8 +15,8 @@ import (
 	"go/types"
 	"os"
 
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/simpler/ssa"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/simpler/ssa/ssautil"
+	"github.com/alphayan/goreporter/linters/simpler/ssa"
+	"github.com/alphayan/goreporter/linters/simpler/ssa/ssautil"
 	"golang.org/x/tools/go/loader"
 )
 

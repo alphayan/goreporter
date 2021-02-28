@@ -20,10 +20,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/simpler/ssa"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/simpler/ssa/ssautil"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/staticcheck/callgraph"
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/staticcheck/callgraph/rta"
+	"github.com/alphayan/goreporter/linters/simpler/ssa"
+	"github.com/alphayan/goreporter/linters/simpler/ssa/ssautil"
+	"github.com/alphayan/goreporter/linters/staticcheck/callgraph"
+	"github.com/alphayan/goreporter/linters/staticcheck/callgraph/rta"
 	"golang.org/x/tools/go/loader"
 )
 

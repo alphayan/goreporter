@@ -1,7 +1,7 @@
 package staticcheck
 
 import (
-	"github.com/360EntSecGroup-Skylar/goreporter/linters/simpler/lint/lintutil"
+	"github.com/alphayan/goreporter/linters/simpler/lint/lintutil"
 )
 
 func StaticCheck(projectPath map[string]string) []string {
