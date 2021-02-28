@@ -15,8 +15,10 @@ package main
 // are always values not addresses, so no annotations are needed.  The
 // declaration is enough.
 
-import "fmt"
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 type J int
 

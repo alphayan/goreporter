@@ -22,6 +22,7 @@ import (
 	"os"
 
 	"go/types"
+
 	"golang.org/x/tools/go/loader"
 )
 

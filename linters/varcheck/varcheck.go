@@ -24,6 +24,7 @@ import (
 	"strings"
 
 	"go/types"
+
 	"golang.org/x/tools/go/loader"
 )
 

@@ -28,7 +28,7 @@ import (
 	"time"
 
 	"github.com/golang/glog"
-	"github.com/json-iterator/go"
+	jsoniter "github.com/json-iterator/go"
 
 	"github.com/360EntSecGroup-Skylar/goreporter/utils"
 )

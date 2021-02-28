@@ -20,7 +20,7 @@ import (
 	"sort"
 	"strings"
 
-	"golang.org/x/tools/go/gcimporter15"
+	"golang.org/x/tools/go/gcexportdata"
 )
 
 type Func func(*File)
@@ -216,18 +216,8 @@ argLoop:
 	return &p.problems[len(p.problems)-1]
 }
 
-var gcImporter = gcimporter.Import
-
-// importer implements go/types.Importer.
-// It also implements go/types.ImporterFrom, which was new in Go 1.6,
-// so vendoring will work.
-type importer struct {
-	impFn    func(packages map[string]*types.Package, path, srcDir string) (*types.Package, error)
-	packages map[string]*types.Package
-}
-
-func (i importer) Import(path string) (*types.Package, error) {
-	return i.impFn(i.packages, path, "")
+var newImporter = func(fset *token.FileSet) types.ImporterFrom {
+	return gcexportdata.NewImporter(fset, make(map[string]*types.Package))
 }
 
 // (importer).ImportFrom is in lint16.go.
@@ -235,11 +225,8 @@ func (i importer) Import(path string) (*types.Package, error) {
 func (p *Pkg) typeCheck() error {
 	config := &types.Config{
 		// By setting a no-op error reporter, the type checker does as much work as possible.
-		Error: func(error) {},
-		Importer: importer{
-			impFn:    gcImporter,
-			packages: make(map[string]*types.Package),
-		},
+		Error:    func(error) {},
+		Importer: newImporter(p.fset),
 	}
 	info := &types.Info{
 		Types:  make(map[ast.Expr]types.TypeAndValue),

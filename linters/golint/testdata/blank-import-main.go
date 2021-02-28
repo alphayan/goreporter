@@ -4,10 +4,10 @@
 // Binary foo ...
 package main
 
-import _ "fmt"
-
 import (
+	_ "fmt"
 	"os"
+
 	_ "path"
 )
 

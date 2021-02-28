@@ -7,9 +7,8 @@ package foo
 // mistaken for documentation.
 
 /* MATCH /blank import/ */
-import _ "encoding/json"
-
 import (
+	_ "encoding/json"
 	"fmt"
 
 	/* MATCH /blank import/ */
@@ -17,23 +16,25 @@ import (
 
 	/* MATCH /blank import/ */
 	_ "net/http"
+
 	_ "path"
-)
 
-import _ "encoding/base64" // Don't gripe about this
+	_ "encoding/base64"
 
-import (
+	// Don't gripe about this
+
 	// Don't gripe about these next two lines.
 	_ "compress/zlib"
+
 	_ "syscall"
 
 	/* MATCH /blank import/ */
-	_ "path/filepath"
-)
-
-import (
 	"go/ast"
-	_ "go/scanner" // Don't gripe about this or the following line.
+	_ "path/filepath"
+
+	_ "go/scanner"
+
+	// Don't gripe about this or the following line.
 	_ "go/token"
 )
 

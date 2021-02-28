@@ -21,6 +21,7 @@ import (
 	"unsafe"
 
 	"go/types"
+
 	"golang.org/x/tools/go/loader"
 )
 

@@ -18,9 +18,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/golang/glog"
-	"go/build"
 	"fmt"
+	"go/build"
+
+	"github.com/golang/glog"
 )
 
 var (
@@ -38,7 +39,7 @@ func DirList(projectPath string, suffix, except string) (dirs map[string]string,
 	}
 	if build.IsLocalImport(projectPath) {
 		toPos := strings.LastIndex(projectPath, string(filepath.Separator))
-		relativePath = projectPath[0:toPos+1]
+		relativePath = projectPath[0 : toPos+1]
 	}
 	exceptsFilter(except)
 	err = filepath.Walk(projectPath, func(subPath string, f os.FileInfo, err error) error {

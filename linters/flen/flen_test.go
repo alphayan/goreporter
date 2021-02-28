@@ -46,7 +46,7 @@ func TestFuncLensLen(t *testing.T) {
 		// Expected results.
 		want int
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
 	}
 	for _, tt := range tests {
 		if got := tt.flens.Len(); got != tt.want {
@@ -67,7 +67,7 @@ func TestFuncLensLess(t *testing.T) {
 		// Expected results.
 		want bool
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
 	}
 	for _, tt := range tests {
 		if got := tt.flens.Less(tt.i, tt.j); got != tt.want {
@@ -86,7 +86,7 @@ func TestFuncLensSwap(t *testing.T) {
 		i int
 		j int
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
 	}
 	for _, tt := range tests {
 		tt.flens.Swap(tt.i, tt.j)
@@ -120,7 +120,7 @@ func TestGenerateFuncLens(t *testing.T) {
 		want    FuncLens
 		wantErr bool
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
 	}
 	for _, tt := range tests {
 		got, _, err := GenerateFuncLens(tt.pkg, tt.options)
@@ -144,7 +144,7 @@ func TestGetPkgPath(t *testing.T) {
 		want  string
 		want1 *os.PathError
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
 	}
 	for _, tt := range tests {
 		got, got1 := getPkgPath(tt.pkgname)
