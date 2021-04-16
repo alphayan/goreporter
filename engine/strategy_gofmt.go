@@ -36,6 +36,9 @@ func (s *StrategyGoFmt) Compute(parameters StrategyParameter) (summaries *Summar
 	sumProcessNumber := int64(10)
 	processUnit := utils.GetProcessUnit(sumProcessNumber, len(lints))
 	for _, lintTip := range lints {
+		if lintTip == "" {
+			break
+		}
 		packageName := utils.PackageNameFromGoPath(lintTip)
 		erroru := Error{
 			LineNumber:  1,
@@ -60,7 +63,6 @@ func (s *StrategyGoFmt) Compute(parameters StrategyParameter) (summaries *Summar
 			sumProcessNumber = sumProcessNumber - processUnit
 		}
 	}
-
 	return summaries
 }
 
