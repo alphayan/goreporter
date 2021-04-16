@@ -16,11 +16,11 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/reconquest/barely v0.0.0-20160729074550-0f12e3bb2e13
 	github.com/reconquest/loreley v0.0.0-20200601121626-621c1cd37fd1
-	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83 // indirect
+	golang.org/x/crypto v0.0.0-20210415154028-4f45737414dc // indirect
 	golang.org/x/lint v0.0.0-20201208152925-83fdc39ff7b5
-	golang.org/x/mod v0.4.1 // indirect
-	golang.org/x/sys v0.0.0-20210228012217-479acdf4ea46 // indirect
-	golang.org/x/term v0.0.0-20210220032956-6a3ed077a48d // indirect
+	golang.org/x/mod v0.4.2 // indirect
+	golang.org/x/sys v0.0.0-20210415045647-66c3f260301c // indirect
+	golang.org/x/term v0.0.0-20210406210042-72f3dc4e9b72 // indirect
 	golang.org/x/tools v0.1.0
 	mvdan.cc/lint v0.0.0-20170908181259-adc824a0674b
 )
